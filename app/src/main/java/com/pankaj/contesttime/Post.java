@@ -16,7 +16,7 @@ public class Post {
     private String endTime;
 
     @SerializedName("duration")
-    private String duration;
+    private int duration;
 
     @SerializedName("site")
     private String site;
@@ -27,10 +27,8 @@ public class Post {
     @SerializedName("status")
     private String status;
 
-    // Add constructors, getters, and setters here
 
-    // Example constructor
-    public Post(String name, String url, String startTime, String endTime, String duration, String site,
+    public Post(String name, String url, String startTime, String endTime, int duration, String site,
                 String in24Hours, String status) {
         this.name = name;
         this.url = url;
@@ -42,7 +40,6 @@ public class Post {
         this.status = status;
     }
 
-    // Example getters and setters
     public String getName() {
         return name;
     }
@@ -51,5 +48,59 @@ public class Post {
         this.name = name;
     }
 
-    // Repeat the above pattern for other properties
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getIn24Hours() {
+        return in24Hours;
+    }
+
+    public void setIn24Hours(String in24Hours) {
+        this.in24Hours = in24Hours;
+    }
 }

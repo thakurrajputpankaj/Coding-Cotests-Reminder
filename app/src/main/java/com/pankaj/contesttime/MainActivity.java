@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -17,18 +18,20 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private ApiService apiService;
-    TextView textView;
+    ListView listView;
     Button all;
     Button hacker_rank;
     Button top_coder;
     Button code_chef;
     Button code_forces;
 
+    private PostAdapter postAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = (TextView) findViewById(R.id.data);
+        listView = (ListView) findViewById(R.id.data);
         all = (Button) findViewById(R.id.all);
         hacker_rank = (Button) findViewById(R.id.hacker_rank);
         top_coder = (Button) findViewById(R.id.top_coder);
@@ -88,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     List<Post> contests = response.body();
                     if (contests != null && contests.size() > 0) {
-                        Post firstContest = contests.get(0);
-                        textView.setText("First Contest Name: " + firstContest.getName());
+                        postAdapter = new PostAdapter(MainActivity.this,contests);
+                        listView.setAdapter(postAdapter);
                     } else {
-                        textView.setText("No contests available.");
+
                     }
                 } else {
                     Log.e("API_ERROR", "Failed to retrieve data: " + response.message());
