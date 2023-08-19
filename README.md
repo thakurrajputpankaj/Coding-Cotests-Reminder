@@ -11,7 +11,7 @@ ContestTime is an Android app that helps you keep track of upcoming coding conte
 - Easy navigation through contest categories.
 
 ## Screenshots
-<img src="[URL_TO_IMAGE](https://github.com/thakurrajputpankaj/Coding-Cotests-Reminder/assets/25041269/d4e85e63-ccd8-4700-ab77-e41d10e1b3ea)" width="300">
+<img src="https://github.com/thakurrajputpankaj/Coding-Cotests-Reminder/assets/25041269/d4e85e63-ccd8-4700-ab77-e41d10e1b3ea" width="300">
 ![App Demo 1](https://github.com/thakurrajputpankaj/Coding-Cotests-Reminder/assets/25041269/d4e85e63-ccd8-4700-ab77-e41d10e1b3ea)
 ![App Demo 2](https://github.com/thakurrajputpankaj/Coding-Cotests-Reminder/assets/25041269/a792be58-fdd9-493c-a940-c3cde0f15e3d)
 
